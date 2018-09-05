@@ -2,6 +2,10 @@ body {
   background: rgb(221, 157, 157)
 }
 
+#contents {
+  display: none;
+}
+
 .loader {
   color: #fff;
   font-size: 90px;
