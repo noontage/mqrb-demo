@@ -2,22 +2,115 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Monocoque-Ruby(mqrb) - Demo</title>
-    <script src="production.js"></script>
+  <title>Monocoque-Ruby(mqrb) - Demo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.2/css/bulma.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="production.js"></script>
 </head>
 
 <body>
-    <div id="progress" class="loader" style="display: none"></div>
-    <div id="contents">
-      <textarea>
-        a
-        b
-        c
-      </textarea>
-  
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Monocoque-Ruby Demo
+        </h1>
+        <h2 class="subtitle">
+          Ruby on Browzser Sample
+        </h2>
+      </div>
     </div>
+  </section>
+
+  <div id="progress" class="vmloading" style="display: none"></div>
+
+  <!-- main contents -->
+  <div id="main-contents">
+    <!-- editor control-->
+    <div class="columns">
+      <div class="column is-12">
+        <div id="editor-controol">
+          <a id="play-button" class="button is-success is-large"><i class="fas fa-play"></i> Execute Ruby Script</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- sample and editor -->
+    <div class="columns">
+      <div class="column is-5">
+        <div id="sample-html">
+          <!-- sample -->
+          <div class="columns">
+            <div class="column is-12">
+              <p class="title is-4" id="sample-text">Loading...</p>
+              <p>id='sample-text'</p>
+            </div>
+          </div>
+
+          <div class="columns">
+            <!-- image -->
+            <div class="column is-6">
+              <img id="sample-image" src="sample-img1.jpg" width="400" height="300">
+              <p>id='sample-image'</p>
+            </div>
+            <!-- forms -->
+            <div class="column is-6">
+              <h1 class="title">element sample</h1>
+
+              <div class="control">
+                <div class="select">
+                  <select id="sample-select">
+                    <option selected>Grayscale</option>
+                    <option>Sepia</option>
+                    <option>Saturate</option>
+                  </select>
+                </div>
+                <p>id='sample-select'</p>
+              </div>
+
+              <br>
+
+              <p class="control">
+                <input id="sample-input-number" class="text" type="number" value="50" placeholder="value" max="100" min="0" step="5">                %
+                <p>id='sample-input-number'</p>
+              </p>
+
+              <br>
+
+              <label class="checkbox">
+                <input id="sample-checkbox" type="checkbox"> Blur
+              </label>
+              <p>id='sample-checkbox'</p>
+
+              <br>
+
+              <div class="control">
+                <button id="sample-button-apply" class="button is-success medium">Apply</button>
+                <button id="sample-button-clear" class="button is-text">Clear</button>
+                <p>id='sample-button-apply'</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- editor -->
+      <div class="column is-7">
+        <div id="editor"></div>
+      </div>
+    </div>
+
+    <br>
+
+    <footer>
+      noontage
+    </footer>
+  </div>
+
 </body>
 
 </html>

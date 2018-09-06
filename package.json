@@ -9,13 +9,16 @@
   "author": "noontage",
   "license": "ISC",
   "dependencies": {
-    "monaco-editor": "^0.14.3"
+    "monaco-editor": "^0.14.3",
+    "monaco-editor-webpack-plugin": "^1.5.2"
   },
   "devDependencies": {
-    "npm": "^6.4.1",
-    "babel-loader": "^7.1.5",
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "npm": "^6.4.1",
+    "style-loader": "^0.23.0",
     "webpack": "^4.1.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.1"

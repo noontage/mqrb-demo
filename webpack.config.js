@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -11,18 +12,25 @@ module.exports = {
         filename: 'production.js'
     },
     module: {
-        rules: [{
-            test: /\.js$/,
-            include: path.resolve(__dirname, 'src'),
-            use: [{
-                loader: 'babel-loader',
-                options: {
-                    presets: [
-                        'es2015'
-                    ],
-                },
-            }],
-        }],
+        rules: [
+            {
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'src'),
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            'es2015'
+                        ],
+                    },
+                }
+                ],
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ],
     },
     resolve: {
         alias: {}
@@ -34,5 +42,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, 'public'),
         port: 3999,
     },
-    plugins: []
+    plugins: [
+        new MonacoWebpackPlugin()
+    ]
 }

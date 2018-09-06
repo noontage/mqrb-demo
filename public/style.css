@@ -1,13 +1,43 @@
-body {
-  background: rgb(221, 157, 157)
+html {
+  background: #eee;
+  color: #222;
+  height: 100%;
 }
 
-#contents {
+body, #main-contents{
+  height: 100%;
+}
+
+#sample-html{
+  background-color: whitesmoke;
+  height: 75vh;
+}
+
+#main-contents
+{
+  margin: 1em;
   display: none;
 }
 
-.loader {
-  color: #fff;
+#editor-controol
+{
+  text-align: right;
+}
+
+#editor
+{
+  width:100%;
+  height: 75vh;
+}
+
+.visible_element
+{
+  border: solid 3px #30a0f3;
+  border-radius: 10px;
+}
+
+.vmloading {
+  color: rgb(155, 170, 255);
   font-size: 90px;
   text-indent: -9999em;
   overflow: hidden;
