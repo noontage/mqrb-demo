@@ -41,6 +41,8 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, 'public'),
         port: 3999,
+        host: '0.0.0.0',
+        disableHostCheck: true
     },
     plugins: [
         new MonacoWebpackPlugin()

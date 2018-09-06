@@ -4,7 +4,8 @@
   "description": "monocoque-ruby demo",
   "scripts": {
     "start": "webpack-dev-server --inline",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "build-dev": "webpack"
   },
   "author": "noontage",
   "license": "ISC",
