@@ -9,6 +9,10 @@
 # production
 /build
 
+/public/*.production.js
+/public/*.worker.js
+/public/production.js
+
 # misc
 .DS_Store
 .env.local
